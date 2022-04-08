@@ -1,0 +1,42 @@
+{% extends 'home.html'%}
+{% load static%}
+{% block container%}
+
+<section class="page-header padding">
+    <div class="container">
+    <div class="page-content text-center">
+    <h2>Specialized team</h2>
+    <p>Construction & Building Html Template.</p>
+    </div>
+    </div>
+    </section>
+
+    <section class="team-section bg-gray padding">
+        <div class="dots"></div>
+        <div class="container">
+        <div class="row team-wrap box-shadow">
+            {% for p in team%}
+            <a href="">
+        <div class="col-lg-3 col-sm-6 padding-15">
+        <div class="team-item">
+        <div class="overlay"></div>
+        <img src="{{p.image.url}}" alt="team">
+        <div class="team-content">
+        <h3>{{p.name}}</h3>
+        <span>{{p.espicial_category}}</span>
+        </div>
+        <ul class="team-social">
+        <li><a href="{{p.facebook_url}}"><i class="ti-facebook"></i></a></li>
+        <li><a href="#"><i class="ti-twitter"></i></a></li>
+        <li><a href="#"><i class="ti-instagram"></i></a></li>
+        <li><a href="#"><i class="ti-youtube"></i></a></li>
+        </ul>
+        </div>
+        </div>
+    </a>
+        {% endfor%}
+       
+        </div>
+        </div>
+        </section>
+{% endblock%}
